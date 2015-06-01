@@ -57,6 +57,11 @@ class PDFPage
       
   maxY: ->
     @height - @margins.bottom
+    
+  #maximum y-coordinate text can be written to 
+  # (above footer - if no y-coordinate is set)
+  footerStartY: ->
+    @height - @margins.bottom - @footerHeight
         
   write: (chunk) ->
     @content.write chunk

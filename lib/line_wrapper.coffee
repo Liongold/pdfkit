@@ -15,7 +15,7 @@ class LineWrapper extends EventEmitter
     @column    = 1
     @ellipsis  = options.ellipsis
     @continuedX  = 0
-    @footerStartY = @document.page.maxY() - @document.page.footerHeight
+    @footerStartY = @document.page.footerStartY
     
     # calculate the maximum Y position the text can appear at
     if options.height?
